@@ -6,9 +6,18 @@ Numerical expriments are done for MovieLens dataset for VAE and Last.fm for cond
 
 ### Dataset
 
-Download datasets from:
-* [MovieLens 20M Dataset](https://grouplens.org/datasets/movielens/20m/)
-* [Last.fm Dataset - 360K users](http://ocelma.net/MusicRecommendationDataset/lastfm-360K.html)
+Two datasets are used in this repo.
+* [MovieLens 20M Dataset](https://grouplens.org/datasets/movielens/20m/): This contains rating for movies by users.
+This collaborative filtering recommends movies user would like to watch.
+* [Last.fm Dataset - 360K users](http://ocelma.net/MusicRecommendationDataset/lastfm-360K.html): 
+This contains play counts of artists by users and user profile, gender, age, country and signup data.
+This collaborative filtering recommends artists user would like to listen to, using play counts and user profiles.
+You can use VAE conditioned on the the user profiles.
+
+After downloading datasets, run
+```bash
+create_data.sh
+```
 
 ### Training
 
